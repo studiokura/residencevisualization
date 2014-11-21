@@ -1,0 +1,39 @@
+artist_id,delay,origin_location,destination_location,destination_name
+artistsシートと画像のファイル名と一致させて下さい（表示されない）,アーティストのアニメーションの中で、この動きが始まるタイミング（表示されない）,動きの始点のID。locationsシートと一致させて下さい。（表示されない）,動きの終点のID。locationsシートと一致させて下さい。（表示されない）,終点の名前。ここに書かれたまま、地図に表示されます（表示される）
+marcel,0,alicante,itoshima,Studio Kura
+marcel,100,itoshima,fukuoka,IAF Shop Gallery
+mellisa,0,seoul,itoshima,Studio Kura
+mellisa,100,itoshima,fukuoka,IAF Shop Gallery
+lev,0,moscow,itoshima,Studio Kura
+lev,100,itoshima,fukuoka,IAF Shop Gallery
+juan,0,quito,itoshima,Studio Kura
+juan,100,itoshima,nagoya,Alternative Space Parlwr
+meri,0,miyazaki,tokyo,Art Space Yahiro Haichi
+meri,100,tokyo,itoshima,Studio Kura
+ben,0,beijing,itoshima,Studio Kura
+ben,100,itoshima,fukuoka,IAF Shop Gallery
+jasmina,0,seattle,itoshima,Studio Kura
+jasmina,75,itoshima,akiyoshidai,Akiyoshidai ArtVillage
+jasmina,100,akiyoshidai,setouchi,setouchi international art festival2012
+jane,0,andorra,itoshima,Studio Kura
+jane,75,itoshima,kumamoto,Kumamoto Modern Art Museum
+kyra,0,paris,itoshima,Studio Kura
+shih,0,singapore,itoshima,Studio Kura
+shih,75,singapore,miyazaki,Miyazaki Art Center
+shih,120,itoshima,tokyo,Yukobo Art Space
+bas,0,denhaag,sapporo,S-Air
+bas,75,sapporo,itoshima,Studio Kura
+bas,100,itoshima,beppu,Beppu Project
+joohee,0,london,itoshima,Studio Kura
+joohee,75,itoshima,songjeong,Clayarch Gimhae Museum
+juliane,0,luxembourg,itoshima,Studio Kura
+juliane,75,fukuoka,itoshima,Studio Kura
+michael,0,caracas,itoshima,Studio Kura
+michael,75,itoshima,singapore,Instinc Art Space
+saran,0,madrid,tokyo,Yukobo Art Space
+saran,75,tokyo,itoshima,Studio Kura
+justin,0,andorra,itoshima,Studio Kura
+justin,50,itoshima,tokyo,Yukobo Art Space
+justin,100,tokyo,itoshima,Itoshima International Art Festival
+martijin,0,alicante,tokyo,Yukobo Art Space
+martijin,75,tokyo,itoshima,Studio Kura
