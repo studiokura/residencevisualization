@@ -27,6 +27,10 @@ int numberOfCountriesMax = 14;
 StringList rankedCountries;
 StringList abcCountries;
 
+String title;
+Location secondLoopLocation;
+int secondLoopZoomLevel;
+
 UnfoldingMap currentMap;
 UnfoldingMap mapDetail;
 UnfoldingMap map1, map2, map3, map4, map5, map6, map7;
@@ -64,7 +68,7 @@ void setup() {
   map6 = new UnfoldingMap(this, new EsriProvider.WorldShadedRelief());//MapQuestProvider
   MapUtils.createDefaultEventDispatcher(this, map1, map2, map3, map4);
   currentMap = map1;
-  currentMap.zoomAndPanTo(new Location(30.5f, 30.4f), 2);
+  currentMap.zoomAndPanTo(new Location(30.5f, 30.4f), 2); //World map
 
   boolean firstrow;
 
@@ -139,6 +143,20 @@ void setup() {
     firstrow = false;
   }
 
+  //Importing settings
+  StringList settings = new StringList();
+  Table settingsTable = loadTable("visualization_data_test - settings.csv", "header");
+  for (TableRow row : settingsTable.rows()) {
+    String value = row.getString("value");
+    settings.append(value);
+  }
+  println(settings);
+  title = settings.get(0);
+  secondLoopLocation = getPlace(settings.get(1)).location;
+  secondLoopZoomLevel = int(settings.get(2));
+  
+
+  //Getting the country list ready to show how many artists visited
   Collections.sort(countries);
   println(countries);
   numberOfCountries = countries.size();
@@ -159,7 +177,6 @@ void setup() {
 
   textSize(18);
   smooth();
-
 }
 
 void draw() {
@@ -167,7 +184,6 @@ void draw() {
   background(240);
 
   currentMap.draw();
-
 
   strokeWeight(1);
   noFill();
@@ -178,6 +194,12 @@ void draw() {
   textSize(24);
   fill(0);
   text(year, 18, 45);
+
+  //title
+  textFont(font);
+  textSize(24);
+  fill(0);
+  text(title, 328, 45);
 
   //country count;
   textSize(14);
@@ -241,11 +263,11 @@ void draw() {
 
       if (mapZoom==2) {
         //println("zooming currentMap to mapZoom 2");
-        currentMap.zoomAndPanTo(places.get(1).location, 5);
+        currentMap.zoomAndPanTo(secondLoopLocation, secondLoopZoomLevel); //Detailed map (second loop)
       }
       if (mapZoom==1) {
         //println("zooming currentMap to mapZoom 1");
-        currentMap.zoomAndPanTo(new Location(30.5f, 30.4f), 2);
+        currentMap.zoomAndPanTo(new Location(30.5f, 30.4f), 2); //World map
       }
 
       //Refresh all ArtistMoveArc ScreenPositions

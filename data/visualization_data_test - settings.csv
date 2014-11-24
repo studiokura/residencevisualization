@@ -1,0 +1,4 @@
+field,value,comment
+title,Studio Kura Artist in Residence,AiRプログラムの名前など
+secondLoopLocation,itoshima,2回目動きを見せる際の地図の中心の地名（例：itoshima）
+secondLoopZoomLevel,5,2回目動きを見せる際の地図のズームレベル（例：5）
